@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Yatra One', cursive; /* Apply Yatra One font */
+    background-color: #151515; /* Dark background */
+    color: #b1b1b1; /* Muted text */
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(10, 10, 10, 0.6); /* Transparent header */
+}
+
+.title h1 {
+    font-size: 3rem;
+    color: #e7e7e7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: flicker 3s infinite alternate;
+    text-shadow: 2px 2px 8px #000;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 2px 2px 12px #ff0000;
+    }
+}
+
+/* Navbar Styling */
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #d1d1d1;
+    font-size: 1.7rem;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff5555; /* Dim red for hover */
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: space-between; /* Adjusted to spread content better */
+    align-items: center;
+    height: 120vh;
+    padding: 120px;
+    background-image: url('zzzsouc.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 80px;
+}
+
+.banner-image {
+    max-width: 35%; /* Reduced width for better balance */
+    filter: grayscale(50%) opacity(0.9); /* Less grayscale, better contrast */
+    margin-right: 50px; /* Added spacing between image and text box */
+}
+
+.about-box {
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 40px; /* More padding for breathing room */
+    border: 2px solid #ff5555;
+    max-width: 50%; /* Slightly larger box for better content fit */
+    animation: fadeIn 2s ease;
+    color: #c1c1c1;
+    text-shadow: 1px 1px 4px #000;
+    margin-bottom: 90px;
+}
+
+.about-box h2 {
+    font-size: 2.7rem; /* Slightly larger heading */
+    margin-bottom: 15px; /* Increased space below the heading */
+    color: #ff5555;
+}
+
+.about-box p {
+    font-size: 1.3rem; /* Improved readability for the text */
+    line-height: 1.6; /* Added line height for better spacing */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Woundnomics Section */
+/* Woundnomics Section */
+.woundnomics {
+    background-image: url('Untitled\ design\ \(1\).png'); /* Add the background image */
+    background-size:cover;
+    background-position:right;
+    position: relative;
+    padding: 60px;
+    text-align: center;
+    color: #b1b1b1;
+    z-index: 1; /* Ensure it sits above the background */
+}
+
+.woundnomics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+.woundnomics h2 {
+    font-size: 2.8rem;
+    color: #ff5555;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.wound-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.wound-box {
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 1px solid #ff5555;
+    padding: 20px;
+    width: 220px;
+    margin: 25px;
+    animation: fractureIn 1.5s ease forwards;
+    color: #b1b1b1;
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+@keyframes fractureIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Social Section */
+.socials {
+    background-color: #151515;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%; /* Restricts the width for better layout */
+    gap: 0px; /* Space between image and text */
+}
+
+.social-image {
+    max-width: 35%; /* Controls the image size */
+    filter: grayscale(100%) contrast(50%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-image:hover {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.social-text {
+    max-width: 60%; /* Ensure text doesn't span too wide */
+    text-align: left; /* Align text to the left */
+}
+
+.social-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px #000;
+    color: #ff5555;
+}
+
+.social-icons a img {
+    width: 45px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%) contrast(50%);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%) contrast(100%);
+}
